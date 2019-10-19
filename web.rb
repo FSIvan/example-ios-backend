@@ -190,7 +190,8 @@ post '/create_setup_intent' do
   return {
     :intent => setup_intent.id,
     :secret => setup_intent.client_secret,
-    :status => setup_intent.status
+    :status => setup_intent.status,
+    :next_action => setup_intent.next_action
   }.to_json
 end
 
